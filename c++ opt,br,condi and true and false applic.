@@ -4,11 +4,13 @@ Sumar
 Restar
 Multiplicar
 Dividir
+(Promedio y elelvacion de valores agregados)
 Una vez realizada la operación el programa debe mostrar otro menu con opciones para:
 
 Realizar un operación distinta con los mismos números
 Ingresar nuevos números para seguir realizando operaciones
 Salir del programa
+Agradecimiento al programador como opcion agregado
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
