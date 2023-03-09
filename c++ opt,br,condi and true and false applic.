@@ -1,0 +1,104 @@
+El programa debe recibir 2 números del usuario y usando un menu preguntar si el usuario desea:
+
+Sumar
+Restar
+Multiplicar
+Dividir
+Una vez realizada la operación el programa debe mostrar otro menu con opciones para:
+
+Realizar un operación distinta con los mismos números
+Ingresar nuevos números para seguir realizando operaciones
+Salir del programa
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	
+	double val_1 = 0;
+	double val_2 = 0;
+	bool programa = true, val = true;
+	
+	while(programa)
+	{
+		char op, op_2;
+		double num_1 {}, num_2 {};	
+		if(val){
+			cout << "Ingrese dos valores: "<<endl;
+			cin >> val_1 >> val_2;
+		}
+		else{
+			val_1 = num_1;
+			val_2 = num_2;
+		}
+		
+		
+		while (op != '1' or  op != '2' or  op != '3' or op != '4')
+		{
+			
+			cout << endl << "------------¿ QUE OPERACION DESEA HACER ?------------" << endl<<endl<<
+			"Segun la operacion que desea realizar, oprima en su teclado el valor correspondiente indicado en la parte izquierda de la lista porpuesta" <<endl<< endl <<
+			"1---Sumar" << endl << "2---Restar" 
+			<< endl << "3---Multiplicar" << endl << "4---Dividir" << endl << "5---Elevar ambos valores al cuadrado de forma independiente" << endl <<"6---Promedio de los dos valoes";
+			cout << endl << endl<<"Seleccione una opcion: "<<endl;
+			cin >> op;
+			if (op == '1')
+				cout << endl << "La sumatoria es: " << val_1 + val_2 << endl;
+			else if (op == '2')
+				cout << endl << "La sustraccion es de: " << val_1 - val_2 << endl;
+			else if (op == '3')
+				cout << endl << "La multiplicacion es de: " << val_1 * val_2 << endl;
+			else if (op == '4')
+				cout << endl << "La division es de: " << val_1 / val_2 << endl;
+			else if (op == '5')
+				cout << endl << "Los valores al cuadrado de forma independiente son: " <<endl 
+				<<endl<<"Valor 1 al cuadrado: "<< val_1*val_1 << endl <<"Valor 2 al cuadrado: "<< val_2*val_2 << endl;
+			else if (op == '6')
+				cout << endl << "El promedio es de: " << (val_1 + val_2)/2 << endl;
+			else if (op >= 7)
+				cout << endl <<"Por favor, mantengase en el rango de valores indicado "<<endl;
+			else if (op <= 0)
+				cout << endl <<"Por favor, mantengase en el rango de valores indicado "<<endl;	
+			break;
+		}
+				
+			
+		while (op_2 != '1' or op_2 != '2' or op_2 != '3')
+		{
+			cout << endl << "--------Usted que prefiere: --------" << endl << "1. Realizar una operacion distinta con los mismos numeros" 
+			<< endl << "2. Ingresar nuevos numeros para seguir realizando operaciones" << endl << "3. Salir del programa" 
+			<< endl<< "4. Agradecer al programador ";
+			cout << endl << "Seleccione una opcion: ";
+			cin >> op_2;
+			
+			if(op_2 == '1'){
+				val = false;
+				val_1 = num_1;
+				val_2 = num_2;
+				break;            
+				
+			}
+			else if(op_2 == '2'){
+				val = true;
+				break;
+			}
+			else if(op_2 == '3'){
+				programa = false;
+				cout<<endl<<"Usted ha salido del programa correctamente";
+				break;
+			}
+			else if(op_2 =='4'){
+				programa = false;
+				cout<<endl<<"Gracias por su aprecio, tenga un buen dia (:";
+				break;
+		 	
+			}else 
+				cout << endl << "Intente nuevamente. ";
+			}
+												
+		
+		}
+				
+	}
