@@ -1,0 +1,96 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+
+
+	int num{};
+	cout<<"Ingrese un num: ";
+	cin>>num;
+	
+	cout<<endl<<"Cuadrado completo con relleno"<<endl<<endl;
+	for (int i{1};i<=num;i++){
+	    for(int j{1};j<=num;j++)
+				cout<<" *";
+	    cout<<endl;
+	}
+
+	cout<<endl<<endl<<"Cuadrado vacio con una cruz en la mitad"<<endl<<endl;
+	for (int i{1};i<=num;i++){
+	    for(int j{1};j<=num;j++){
+	        if(i==1 or j==1 or i==num or j==num or i==j or (i+j==num+1))
+				cout<<"*";
+	        else 
+				cout<<" ";
+	    }
+	    cout<<endl;
+	}
+
+	cout<<endl<<endl<<"Triangulo rectangulo"<<endl<<endl<<endl;
+	for (int i{1};i<=num;i++){
+	    for(int j{1};j<=num;j++){
+	        if(j==1 or i==num or i==j)
+				cout<<"*";
+	        else 
+				cout<<" ";
+	    }
+	    cout<<endl;
+	}
+	
+		cout<<endl<<endl<<"Triangulo rectangulo de cabeza"<<endl<<endl<<endl;
+	for (int i{1};i<=num;i++){
+	    for(int j{1};j<=num;j++){
+	        if(i==1 or j==num or i==j)
+				cout<<"*";
+	        else 
+				cout<<" ";
+	    }
+	    cout<<endl;
+	}
+	
+		cout<<endl<<endl<<"Rectangulo parado"<<endl<<endl<<endl;
+	for (int i{1};i<=num;i++){
+	    for(int j{1};j<=num;j++){
+	        if(i==1 or j==1 or i==num or j==num)
+				cout<<"*";
+	        else 
+				cout<<" ";
+	    }
+	    cout<<endl;
+	}
+
+		cout<<endl<<endl<<"Rectangulo parado relleno con slashes"<<endl<<endl<<endl;
+	for (int i{1};i<=num;i++){
+	    for(int j{1};j<=num;j++){
+	        if(i==1 or j==1 or i==num or j==num or i==num)
+				cout<<"*";
+	        else 
+				cout<<"/";
+	    }
+	    cout<<endl;
+	}
+	
+		cout<<endl<<endl<<"Rectangulo parado con una cruz en el centro"<<endl<<endl<<endl;
+	for (int i{1};i<=num;i++){
+	    for(int j{1};j<=num;j++){
+	        if(i==1 or i==num/2 or j==num/2 or j==num or i==num)
+				cout<<"*";
+	        else 
+				cout<<" ";
+	    }
+	    cout<<endl;
+	}
+		
+		cout<<endl<<endl<<"Rectangulo parado con una cruz formada por el vacio en el centro"<<endl<<endl<<endl;
+	for (int i{1};i<=num;i++){
+	    for(int j{1};j<=num;j++){
+	        if(i==1 or i==num/2 or j==num/2 or j==num or i==num)
+				cout<<" ";
+	        else 
+				cout<<"*";
+	    }
+	    cout<<endl;
+	}
+	
+	
